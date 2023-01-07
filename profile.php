@@ -6,10 +6,10 @@ checkLogin();
 
 if ($_SERVER['REQUEST_METHOD'] === "POST" && !empty($_POST['username'])) {
   // profile edit
-  $image_added = false
-  if(!empty($_FILES['image']['name']) && $_FILES['image']['error'] == 0){
+  $image_added = false;
+  if (!empty($_FILES['image']['name']) && $_FILES['image']['error'] == 0) {
     $folder = 'uploads/';
-    if(!file_exists($folder)){
+    if (!file_exists($folder)) {
       mkdir($folder, 0777, true);
     }
     $destenation = $folder . $_FILES['image']['name'];
